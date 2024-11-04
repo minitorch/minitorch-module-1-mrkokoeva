@@ -31,6 +31,7 @@ from .strategies import assert_close, small_floats
 
 EPS = 1e-6
 
+
 @pytest.mark.task0_1
 @given(small_floats, small_floats)
 def test_same_as_python(x: float, y: float) -> None:
@@ -174,6 +175,7 @@ def test_sum_distribute(ls1: List[float], ls2: List[float]) -> None:
     is the same as the sum of each element of `ls1` plus each element of `ls2`.
     """
     assert_close(sum(addLists(ls1, ls2)), sum(ls1) + sum(ls2))
+
 
 @pytest.mark.task0_3
 @given(lists(small_floats))
